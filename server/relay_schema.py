@@ -48,6 +48,10 @@ class AddComrade(graphene.Mutation):
 		comrade = create_comrade(**args)
 		return AddComrade(comrade=comrade, ok=True)
 
+# class AddRound(graphene.Mutation):
+# 	class Input:
+		
+
 class Mutation(graphene.ObjectType):
 	add_question = AddQuestion.Field()
 	add_comrade = AddComrade.Field()
